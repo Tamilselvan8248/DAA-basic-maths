@@ -1,22 +1,5 @@
 import java.util.Scanner;
-
 public class PrimeCheck {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
-      
-        System.out.print("Enter a positive integer: ");
-        int number = scanner.nextInt();
-
-        
-        if (isPrime(number)) {
-            System.out.println("Yes");
-        } else {
-            System.out.println("No");
-        }
-    }
-
-   
     public static boolean isPrime(int num) {
         if (num <= 1) {
             return false; 
@@ -31,4 +14,23 @@ public class PrimeCheck {
 
         return true; 
     }
+
+
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+      
+        System.out.print("Enter a positive integer: ");
+        int number = scanner.nextInt();
+
+        
+        if (isPrime(number)) {
+            System.out.println("Yes");
+        } else {
+            System.out.println("No");
+        }
+    }
 }
+   
+
