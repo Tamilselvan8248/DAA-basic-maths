@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class DivideNumbers {
     public static int divide(int dividend, int divisor) {
-        if (divisor == 0) return 0; // Handle division by zero
+        if (divisor == 0) return 0; 
         
         boolean negative = (dividend < 0) ^ (divisor < 0);
         
