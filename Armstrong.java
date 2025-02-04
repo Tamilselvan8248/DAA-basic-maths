@@ -1,23 +1,38 @@
-public class Armstrong{
-    public static void main(String[] args){
-        int num=153,n=num,n1=num;
-        int count=0,lastDigit=0,revNum=0;
-        while(num>0){
-            lastDigit=num%10;
-            num=num/10;
-            count=count+1;            
-        } 
-        while(n>0){
-            int pov=1;
-        lastDigit=num%10;
-        num=num/10;
-        for(int i=0;i<count;i++){
-            pov=pov*pov;
-        }
-        revNum=revNum+pov;
-        }                                                                       
+import java.util.Scanner;
 
-        System.out.println(count);
-       System.out.println(revNum);
+public class Armstrong {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int count = 0;
+        int lastdigit;
+        int armno = 0;
+        int num;
+        int n;
+
+        System.out.println("Enter the number:");
+        num = sc.nextInt();
+
+        n = num; 
+
+        while (num > 0) {
+            lastdigit = num % 10;
+            num = num / 10;
+            count = count + 1;
+        }
+
+        num = n;
+
+        while (num > 0) {
+            lastdigit = num % 10;
+            num = num / 10;
+            armno = armno + (int) Math.pow(lastdigit, count);
+        }
+
+        if (armno == n) {
+            System.out.println(n + " is an Armstrong number.");
+        } else {
+            System.out.println(n + " is not an Armstrong number.");
+        }
     }
 }
